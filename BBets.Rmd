@@ -62,6 +62,9 @@ The 95% confidence interval shows that the value range from `r sortProfit[25]` t
 
 We know now that 35 students is the wrong size for this 2:1 bet.
 
+
+# What size of class makes the 2:1 bet fair ?
+
 ```{r}
 days=1:365
 saveProfit=vector("numeric")
