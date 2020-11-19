@@ -48,9 +48,10 @@ saveProfit[run]=profit
 
 ```{r}
 hist(saveProfit)
+print(mean(saveProfit))
 ```
 
-It looks like Brownlow is making about $275
+It looks like Brownlow is making about $282.64 which is the mean.
 
 ```{r}
 sortProfit=sort(saveProfit)
@@ -82,11 +83,16 @@ saveProfit[run]=profit
 }
 
 ```
+
+
 ```{r}
 hist(saveProfit)
+print(mean(saveProfit))
 ```
 
 Based off this chart we can agree that 28 or 29 students is the right size for this 2:1 bet.
+
+# In the Class and payoff as described what is a 95% confidence interval for Brownlows earnings ?
 
 ```{r}
 days=1:365
@@ -114,27 +120,11 @@ hist(saveProfit)
 
 This chart shows us that in order for this to be a fair game with 35 students Dr. J must pay $4.50 each time he loses.
 
-<!-- We recommend you use git branches -- create a separate branch for each major section i.e. Introduction, Methods, Results, Inferential Results, and Discussion and Conclusions - leave the YAML block untouched until the final merge where you put in your own name !-->
-
-
-
-# Methods
-
-<!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
-
-
-# Profit Estimate
-
-<!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
-
-
-# Confidence interval of Brownlows earning
- 
- 
-<!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
 
 
 # Discussion and Conclusion
+
+Class should be 28 or 29 students for payoff to be fair.
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
