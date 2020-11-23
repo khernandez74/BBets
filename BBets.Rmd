@@ -21,11 +21,12 @@ require(knitr)
 
  At the first day of class there are 35 students in Math Statistics class and professor Brownlow always proposes this bet to his students "I will wager $2 to your bet of $1 that at least two people in today's class have  the same birthday.  He tells me he has made that bet 637 times so far. Where do you think his profits are? Discuss this in a markdown document
 
-# What are the fair odds 
+# Methods what are the fair odds? 
 
-Simulate the betting process 1000 times. Will characterize the results on the simulation.
+Simulate the betting process 1000 times. Will characterize the results on the simulation. A re sampling approach will be utilized in order to estimate what Professor Brownslow profits are. A 95% confidence interval will be used to find the approximate range of Brownslows profits.
 
-### `r as.character(Sys.Date())`
+
+# Profit Estimate
 
 ```{r}
 days=1:365
@@ -53,6 +54,8 @@ print(mean(saveProfit))
 
 It looks like Brownlow is making about $282.64 which is the mean.
 
+# Confidence Interval 
+
 ```{r}
 sortProfit=sort(saveProfit)
 print(sortProfit[25])
@@ -64,7 +67,7 @@ The 95% confidence interval shows that the value range from `r sortProfit[25]` t
 We know now that 35 students is the wrong size for this 2:1 bet.
 
 
-# What size of class makes the 2:1 bet fair ?
+# Class size for a fair 2:1 odds bet
 
 ```{r}
 days=1:365
@@ -90,9 +93,9 @@ hist(saveProfit)
 print(mean(saveProfit))
 ```
 
-Based off this chart we can agree that 28 or 29 students is the right size for this 2:1 bet.
+Based off this chart we can agree that the number of students needed in order to obtain a 2:1 ratio on the bet would be 28 or 29 students.
 
-# In the Class and payoff as described what is a 95% confidence interval for Brownlows earnings ?
+# Fair odds for bet in a 35 person class
 
 ```{r}
 days=1:365
@@ -121,10 +124,9 @@ hist(saveProfit)
 This chart shows us that in order for this to be a fair game with 35 students Dr. J must pay $4.50 each time he loses.
 
 
-
 # Discussion and Conclusion
 
-Class should be 28 or 29 students for payoff to be fair.
+The 95% confidence interval that the value of Brownlows bets would range from 223 to 337. The value will change every time the code is run. We were also able to compute that the number of students needed in order to obtain a 2:1 ratio would be between 28 and 29 students for payoff to be fair. The payout that Brownslows bet would need to pay in order to make this a fair bet for a class of 35 students would need to be approximately $4.50.
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
